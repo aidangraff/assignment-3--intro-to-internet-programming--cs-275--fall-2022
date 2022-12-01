@@ -9,8 +9,8 @@ function artists(json) {
 
     for(let i = 0; i < json.length; i++) {
         theAlbums += `<div class = "all-carousel-slides">`;
-        theAlbums += `<p><a></a></p>`; //CSS a:nth-child was effecting line 14 and 18 in js file when I only wanted it to effect the html arrows
-        theAlbums += `<p><a></a></p>`; //So I added empty anchors to prevent that 
+        theAlbums += `<p><a></a></p>`; //CSS a:nth-child was effecting line 14 and 18 in js file when I only wanted
+        theAlbums += `<p><a></a></p>`; //it to effect the html arrows .So I added empty anchors to prevent that 
         theAlbums += `<a href = "${json[i].url}">${json[i].artist}</a>`;
         theAlbums += `<p>${json[i].album}</p>`;
         theAlbums += `<img src = "${json[i].cover_image.path}" alt = "${json[i].cover_image.alt_content}" width = "${json[i].cover_image.width}" height = "${json[i].cover_image.height}">`;

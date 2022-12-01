@@ -19,7 +19,7 @@ let compressHTML = () => {
 let compressCSS = () => {
     return src(`styles/main.css`)
         .pipe(cssCompressor({collapseWhitespace: true}))
-        .pipe(dest(`prod/css`));
+        .pipe(dest(`prod/styles`));
 };
 
 let compressJS = () => {
@@ -74,8 +74,8 @@ let serve = () => {
     });
 
     watch(`index.html`).on(`change`, reload);
-    watch(`styles/main.css`/*, validateCSS*/).on(`change`, reload);
-    watch(`js/main.js`, series/*(validateJS)*/).on(`change`, reload);
+    watch(`styles/main.css`, validateCSS).on(`change`, reload);
+    watch(`js/main.js`, series(validateJS)).on(`change`, reload);
 
 };
 
@@ -89,11 +89,11 @@ exports.compressHTML = compressHTML;
 exports.compressCSS = compressCSS;
 exports.compressJS = compressJS;
 exports.transpileJSForProd = transpileJSForProd;
-exports.serve = serve/*(
+exports.serve = serve(
     validateCSS,
     validateJS,
     transpileJSForDev
-)*/;
+);
 exports.build = series(
     transpileJSForProd,
     compressHTML,
