@@ -41,19 +41,23 @@ a:nth-child(2) {
     z-index: 10;
 }
 
-/*.right-square {
-    margin-left: 650px;
-    background-color: black;
-    height: 100px;
-    width: 320px;
+.right-rectangle {
+    position: relative;
+    top: -800px;
+    left: 1000px;
+    background-color: white;
+    height: 800px;
+    width: 300px;
     z-index: 5;
 }
 
-.left-square {
-    margin-left: 275px;
-    background-color: black;
-    height: 100px;
-    width: 320px;
+.left-rectangle {
+    position: relative;
+    top: -1500px;
+    left: 0px;
+    background-color: white;
+    height: 800px;
+    width: 300px;
     z-index: 5;
 }
 
