@@ -1,62 +1,62 @@
 body {
-    line-height: 1.4;
-    overflow-x: hidden;
-    font-family: 'Open Sans';
+  line-height: 1.4;
+  overflow-x: hidden;
+  font-family: 'Open Sans', serif;
 }
 
 .carousel-slides {
-    margin-left: 300px;
-    text-align: center;
-    display: flex;
+  margin-left: 300px;
+  text-align: center;
+  display: flex;
 }
 
 .all-carousel-slides {
-    width: 640px;
-    padding-right: 20px;
-    padding-left: 20px;
+  width: 640px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 h1 {
-    text-align: center;
-    font-size: 32px;
-    line-height: 38px;
+  text-align: center;
+  font-size: 32px;
+  line-height: 38px;
 }
 
 .carousel-navigation {
-    position: relative;
+  position: relative;
 }
 
 a:nth-child(1) {
-    position: absolute;
-    top: 250px;
-    background-color: blue;
-    left: 285px;
-    z-index: 10;
+  position: absolute;
+  top: 250px;
+  background-color: blue;
+  left: 285px;
+  z-index: 10;
 }
 
 a:nth-child(2) {
-    position: absolute;
-    top: 250px;
-    background-color: blue;
-    right: 270px;
-    z-index: 10;
+  position: absolute;
+  top: 250px;
+  background-color: blue;
+  right: 270px;
+  z-index: 10;
 }
 
 .right-rectangle {
-    position: relative;
-    top: -800px;
-    left: 1000px;
-    background-color: white;
-    height: 900px;
-    width: 300px;
-    z-index: 5;
+  position: relative;
+  top: -800px;
+  left: 1000px;
+  background-color: white;
+  height: 900px;
+  width: 300px;
+  z-index: 5;
 }
 
 .left-rectangle {
-    position: relative;
-    top: -1700px;
-    background-color: white;
-    height: 900px;
-    width: 280px;
-    z-index: 5;
+  position: relative;
+  top: -1700px;
+  background-color: white;
+  height: 900px;
+  width: 280px;
+  z-index: 5;
 }
