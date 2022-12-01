@@ -89,8 +89,6 @@ exports.compressHTML = compressHTML;
 exports.compressCSS = compressCSS;
 exports.compressJS = compressJS;
 exports.transpileJSForProd = transpileJSForProd;
-exports.compressImages = compressImages;
-exports.copyUnprocessedAssetsForProd = copyUnprocessedAssetsForProd;
 exports.serve = serve/*(
     validateCSS,
     validateJS,
