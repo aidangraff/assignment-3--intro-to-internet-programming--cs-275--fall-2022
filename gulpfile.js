@@ -10,27 +10,27 @@ const { src, dest, series, watch } = require(`gulp`),
     reload = browserSync.reload;
 
 
-let compressHTML = () => {
+let compressHTML = () => {   
     return src(`index.html`)
         .pipe(htmlCompressor({collapseWhitespace: true}))
         .pipe(dest(`prod`));
 };
 
 let compressCSS = () => {
-    return src(`css/style.css`)
+    return src(`styles/main.css`)
         .pipe(cssCompressor({collapseWhitespace: true}))
         .pipe(dest(`prod/css`));
 };
 
 let compressJS = () => {
-    return src(`js/app.js`)
+    return src(`js/main.js`)
         .pipe(babel())
         .pipe(jsCompressor())
         .pipe(dest(`prod/js`));
 };
 
 let validateCSS = () => {
-    return src(`css/style.css`)
+    return src(`styles/main.css`)
         .pipe(cssValidator({
             failAfterError: true,
             reporters: [
@@ -45,18 +45,18 @@ let validateHTML = () => {
 };
 
 let validateJS = () => {
-    return src([`js/app.js`,`gulpfile.js`])
+    return src([`js/main.js`,`gulpfile.js`])
         .pipe(jsValidator());
 };
 
 let transpileJSForDev = () => {
-    return src(`js/app.js`)
+    return src(`js/main.js`)
         .pipe(babel())
         .pipe(dest(`temp/scripts`));
 };
 
 let transpileJSForProd = () => {
-    return src(`js/app.js`)
+    return src(`js/main.js`)
         .pipe(babel())
         .pipe(jsCompressor())
         .pipe(dest(`prod/js`));
@@ -74,8 +74,8 @@ let serve = () => {
     });
 
     watch(`index.html`).on(`change`, reload);
-    watch(`css/style.css`/*, validateCSS*/).on(`change`, reload);
-    watch(`js/app.js`, series/*(validateJS)*/).on(`change`, reload);
+    watch(`styles/main.css`/*, validateCSS*/).on(`change`, reload);
+    watch(`js/main.js`, series/*(validateJS)*/).on(`change`, reload);
 
 };
 
@@ -89,8 +89,9 @@ exports.compressHTML = compressHTML;
 exports.compressCSS = compressCSS;
 exports.compressJS = compressJS;
 exports.transpileJSForProd = transpileJSForProd;
+exports.compressImages = compressImages;
+exports.copyUnprocessedAssetsForProd = copyUnprocessedAssetsForProd;
 exports.serve = serve/*(
-    validateHTML,
     validateCSS,
     validateJS,
     transpileJSForDev
@@ -98,5 +99,5 @@ exports.serve = serve/*(
 exports.build = series(
     transpileJSForProd,
     compressHTML,
-    compressCSS,
+    compressCSS
 );
