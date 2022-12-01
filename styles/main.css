@@ -1,6 +1,7 @@
 body {
     line-height: 1.4;
     overflow-x: hidden;
+    font-family: 'Open Sans';
 }
 
 .carousel-slides {
@@ -46,18 +47,18 @@ a:nth-child(2) {
     top: -800px;
     left: 1000px;
     background-color: white;
-    height: 800px;
+    height: 900px;
     width: 300px;
     z-index: 5;
 }
 
 .left-rectangle {
     position: relative;
-    top: -1500px;
+    top: -1700px;
     left: 0px;
     background-color: white;
-    height: 800px;
-    width: 300px;
+    height: 900px;
+    width: 280px;
     z-index: 5;
 }
 
