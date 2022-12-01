@@ -20,7 +20,7 @@ function artists(json) {
     }
     
 
-    album.innerHTML = theAlbums;
+    album.innerHTML = theAlbums;    
 
 
 
@@ -36,6 +36,15 @@ function artists(json) {
     }
     );
 
+    document.addEventListener(`keydown`, (e) => {
+    {
+        if (e.key === `ArrowRight`) {
+            rightArrow.click();
+        }
+        if (e.key === `ArrowLeft`) {
+            leftArrow.click();
+        }
+    }});
     
 }
 
