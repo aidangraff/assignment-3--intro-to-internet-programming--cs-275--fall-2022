@@ -89,10 +89,11 @@ exports.compressHTML = compressHTML;
 exports.compressCSS = compressCSS;
 exports.compressJS = compressJS;
 exports.transpileJSForProd = transpileJSForProd;
-exports.serve = serve(
+exports.serve = series(
     validateCSS,
     validateJS,
-    transpileJSForDev
+    transpileJSForDev,
+    serve
 );
 exports.build = series(
     transpileJSForProd,
