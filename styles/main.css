@@ -1,87 +1,59 @@
-/*body {
-    font-size: 16px;
-    line-height: 18px;
+body {
+    line-height: 1.4;
+    overflow-x: hidden;
+}
+
+.carousel-slides {
+    margin-left: 300px;
     text-align: center;
     display: flex;
 }
 
-header {
+.all-carousel-slides {
+    width: 640px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+h1 {
+    text-align: center;
     font-size: 32px;
-    line-height: 38.4px;
-    text-align: center;
-}
-
-h1 {
-    font-size: 16px;
-}
-
-.carousel-slides {
-    width: 650px;
-    text-align: center;
-    padding-left: 18px;
-    padding-right: 18px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-/*.firstCover {
-    position: absolute;
-    background-color: white;
-    height: 500px;
-    width:550px;
-    right: 1px;
-}
-*//*
-.secondCover {
-    position: absolute;
-    background-color: white;
-    height: 500px;
-    width:500px;
-    left: 1px; 
-}
-*//*
-.carousel-navigation {
-    position: absolute;
-    background-color: transparent;
-    height: 100px;
-    width:100px;
-    left: 200px;
-    top: 175px;
-}
-/*
-.rightArrow {
-    position: absolute;
-    background-color: white;
-    height: 100px;
-    width:100px;
-    right: 200px;
-    top: 175px;
-}
-*/
-.carousel-slides {
-    display: flex;
-    margin-left: 315px;
-    margin-top: 5px;
-    overflow: hidden;
-    text-align: center;
-}
-
-h1 {
-    text-align: center;
+    line-height: 38px;
 }
 
 .carousel-navigation {
-    position: absolute;
-    margin-top: 200px;
+    position: relative;
 }
 
 a:nth-child(1) {
-    margin-left: 275px;
-    background-color: pink;
+    position: absolute;
+    top: 250px;
+    background-color: blue;
+    left: 285px;
+    z-index: 10;
 }
 
 a:nth-child(2) {
+    position: absolute;
+    top: 250px;
+    background-color: blue;
+    right: 270px;
+    z-index: 10;
+}
+
+/*.right-square {
     margin-left: 650px;
-    background-color: purple;
+    background-color: black;
+    height: 100px;
+    width: 320px;
+    z-index: 5;
+}
+
+.left-square {
+    margin-left: 275px;
+    background-color: black;
+    height: 100px;
+    width: 320px;
+    z-index: 5;
 }
 
