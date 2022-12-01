@@ -55,10 +55,8 @@ a:nth-child(2) {
 .left-rectangle {
     position: relative;
     top: -1700px;
-    left: 0px;
     background-color: white;
     height: 900px;
     width: 280px;
     z-index: 5;
 }
-
